@@ -1,0 +1,141 @@
+<TabHost xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@id/android:tabhost"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bgd" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        >
+	     <TabWidget
+		 	android:id="@android:id/tabs"
+		 	android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:background="#50505050"
+		         />
+	     <FrameLayout
+	      	android:id="@android:id/tabcontent"
+		   	android:layout_width="match_parent"
+		    android:layout_height="match_parent" 
+	         >
+	         
+	         <RelativeLayout
+	             android:id="@+id/linear1"
+	             android:layout_width="match_parent"
+	             android:layout_height="match_parent"
+	             
+	             >
+
+	             <LinearLayout
+	                 android:id="@+id/linear"
+	                 android:layout_width="match_parent"
+	                 android:layout_height="wrap_content"
+	             	 android:orientation="vertical"
+	             	
+	                 >
+
+	             </LinearLayout>
+
+	             <RelativeLayout
+	                 android:id="@+id/relative"
+	                 android:layout_width="match_parent"
+	                 android:layout_height="85dp"
+	                 android:layout_alignParentBottom="true"
+	                 android:layout_alignParentLeft="true"
+	                 android:background="#50505050" >
+
+	                 <TextView
+	                     android:id="@+id/txtMusicInfo"
+	                     android:layout_width="match_parent"
+	                     android:layout_height="wrap_content"
+	                     android:layout_alignParentLeft="true"
+	                     android:layout_alignParentTop="true"
+	                     android:text="歌曲信息"
+	                     android:textSize="20sp" />
+
+	                 <ImageButton
+	                     android:id="@+id/ibtnPlay"
+	                     android:layout_width="wrap_content"
+	                     android:layout_height="wrap_content"
+	                     android:layout_alignParentBottom="true"
+	                     android:layout_centerHorizontal="true"
+	                     android:src="@drawable/play" />
+
+	                 <ImageButton
+	                     android:id="@+id/ibtnNext"
+	                     android:layout_width="wrap_content"
+	                     android:layout_height="wrap_content"
+	                     android:layout_alignParentBottom="true"
+	                     android:layout_marginLeft="40dp"
+	                     android:layout_toRightOf="@+id/ibtnPlay"
+	                     android:src="@drawable/next" />
+
+	                 <ImageButton
+	                     android:id="@+id/ibtnPrev"
+	                     android:layout_width="wrap_content"
+	                     android:layout_height="wrap_content"
+	                     android:layout_alignParentBottom="true"
+	                     android:layout_marginRight="36dp"
+	                     android:layout_toLeftOf="@+id/ibtnPlay"
+	                     android:src="@drawable/previous" />
+
+	             </RelativeLayout>
+
+	             <SeekBar
+	                 android:id="@+id/musicduration"
+	                 android:layout_width="match_parent"
+	                 android:layout_height="wrap_content"
+	                 android:layout_above="@+id/relative"
+	                 android:layout_alignParentLeft="true" />
+	                  
+			 </RelativeLayout>	
+	        
+	         
+	         <LinearLayout
+	             android:id="@+id/linear2"
+	             android:layout_width="match_parent"
+	             android:layout_height="match_parent"
+	             android:orientation="vertical"
+	             >
+	             <ListView
+	                 android:id="@id/android:list"
+	                 android:layout_width="match_parent"
+        			 android:layout_height="0dp" 
+       				 android:layout_weight="1"
+	                 android:background="#ffffff"
+	                 />
+	         </LinearLayout>
+	         
+	          <LinearLayout
+	             android:id="@+id/linear3"
+	             android:layout_width="match_parent"
+	             android:layout_height="match_parent"
+	             android:orientation="vertical"
+	             >
+	             
+	              <LinearLayout 
+	             	android:layout_width="wrap_content"
+	             	android:layout_height="wrap_content"
+	             	android:orientation="horizontal"
+	                  >
+		             <EditText
+		                 android:id="@+id/etSearch"
+		                 android:layout_width="match_parent"
+		                 android:layout_height="wrap_content"
+		                 android:hint="请输入歌名或歌手"
+		                 />
+		             <Button
+		                 android:id="@+id/btnSearch"
+		                 android:layout_width="wrap_content"
+		                 android:layout_height="wrap_content"
+		             	 android:text="搜索"
+		             	/>
+	             </LinearLayout>
+	             
+	         </LinearLayout>
+	
+	     </FrameLayout>
+	</LinearLayout>
+</TabHost>
